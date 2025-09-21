@@ -4,113 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anderson Oliveira | Portfólio de Serviço Social</title>
+    <!-- Adicionando o Tailwind CSS para um design moderno e responsivo -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Estilos básicos para o design da página */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Inter', sans-serif;
             background-color: #f4f4f9;
-            color: #333;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            min-height: 100vh;
-            position: relative; /* Necessário para posicionar o fundo */
-        }
-        .background-logo {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80%;
-            height: auto;
-            opacity: 0.1; /* Transparência suave */
-            z-index: -1; /* Envia a logo para trás do conteúdo */
-            pointer-events: none; /* Garante que não interfira com o clique */
-        }
-        .top-left-logo {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            width: 80px; /* Tamanho da logo no canto superior */
-            opacity: 0.7; /* Transparência para o efeito suave */
-            z-index: 2; /* Garante que fique acima do conteúdo */
-        }
-        .container {
-            width: 90%;
-            max-width: 800px;
-            background: #fff;
-            padding: 2em;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            margin: 2em 0;
-            position: relative;
-            z-index: 1; /* Garante que o conteúdo fique por cima */
-        }
-        h1, h2 {
-            color: #2c3e50;
-            text-align: center;
-        }
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 0.2em;
-        }
-        h2 {
-            font-size: 1.5em;
-            margin-top: 0;
-            color: #7f8c8d;
-            font-weight: 300;
-        }
-        .bio-text {
-            text-align: justify;
-        }
-        .links-list {
-            list-style: none;
-            padding: 0;
-            margin-top: 2em;
-        }
-        .links-list li {
-            margin-bottom: 1em;
-        }
-        .links-list a {
-            display: block;
-            background: #3498db;
-            color: #fff;
-            padding: 1em;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s ease;
-        }
-        .links-list a:hover {
-            background: #2980b9;
-        }
-        .donation-link {
-            display: block;
-            background: #2ecc71; /* Cor para doação */
-            color: white;
-            padding: 1em;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 1em;
-            transition: background 0.3s ease;
-        }
-        .donation-link:hover {
-            background: #27ae60;
-        }
-        footer {
-            margin-top: 2em;
-            text-align: center;
-            color: #7f8c8d;
-            position: relative;
-            z-index: 1;
         }
     </style>
 </head>
-<body>
-    <!-- A logo agora está embutida no código usando Base64. -->
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFmElEQVR4nO3dy27bSBAG4SjO978oH+J7/Yt2z9o9m2kL+J4g9+T0sU0xW2oQdAQY/v3A/+E+HwABhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAhCAAdCriei um novo documento HTML.
+<body class="flex flex-col items-center justify-center min-h-screen relative p-4">
+    <!-- Fundo com logo, agora como um elemento separado para melhor controle -->
+    <img src="https://placehold.co/1000x1000/F0F0F0/D4D4D4?text=Logo" alt="Logo de fundo" class="absolute inset-0 w-full h-full object-cover opacity-5 pointer-events-none -z-10">
+
+    <!-- Container principal com o conteúdo -->
+    <div class="container bg-white p-8 md:p-12 rounded-2xl shadow-xl max-w-2xl w-full z-10 my-8">
+        <div class="text-center">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-1">Anderson Oliveira</h1>
+            <h2 class="text-xl md:text-2xl font-light text-gray-500">Assistente Social</h2>
+        </div>
+
+        <p class="bio-text text-gray-700 text-justify mt-6">
+            Olá! Sou Anderson Oliveira, um assistente social comprometido com a promoção do bem-estar e a defesa dos direitos sociais. Minha paixão é criar soluções inovadoras e eficazes para desafios complexos, trabalhando em conjunto com indivíduos, famílias e comunidades.
+            Este portfólio é um espaço onde você pode conhecer meu trabalho, minhas metodologias e os projetos que desenvolvi para impactar positivamente a sociedade. Acredito que, com as ferramentas certas e uma abordagem empática, podemos construir um futuro mais justo e inclusivo para todos.
+        </p>
+
+        <!-- Lista de Links -->
+        <ul class="links-list mt-8 space-y-4">
+            <li>
+                <a href="#" class="block w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition-transform transform hover:scale-105 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                    Projetos
+                </a>
+            </li>
+            <li>
+                <a href="#" class="block w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition-transform transform hover:scale-105 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                    Artigos Publicados
+                </a>
+            </li>
+            <li>
+                <a href="#" class="block w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition-transform transform hover:scale-105 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                    Certificados e Formações
+                </a>
+            </li>
+            <li>
+                <a href="#" class="block w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition-transform transform hover:scale-105 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                    Clique aqui para colaborar nas Minhas Campanhas
+                </a>
+            </li>
+            <li>
+                <!-- Novo link para solicitar campanha -->
+                <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Anderson.%20Tenho%20interesse%20em%20fazer%20uma%20campanha%20e%20estou%20precisando%20de%20ajuda." 
+                   class="block w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition-transform transform hover:scale-105 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                    Solicite sua campanha personalizada
+                </a>
+            </li>
+        </ul>
+        
+        <!-- Link de Doação -->
+        <a href="#" class="donation-link block w-full bg-green-500 text-white font-semibold py-3 px-6 rounded-lg shadow-md mt-6 transition-transform transform hover:scale-105 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-50">
+            Apoie meu Trabalho
+        </a>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="mt-8 text-gray-500 text-center z-10 text-sm">
+        <div class="flex justify-center space-x-6 mb-4">
+            <!-- Ícone do WhatsApp -->
+            <a href="#" class="text-gray-500 hover:text-gray-900 transition-colors duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-6 w-6 fill-current">
+                    <path d="M380.9 97.1C339.7 54.8 281.8 30.1 219.1 30.1c-129.5 0-234.9 105.4-234.9 234.9 0 40.7 12.8 80.2 36.6 114.1l-24.8 89.9 92.4-24.2c32.7 17.6 69.5 26.8 107.1 26.8h.2c129.5 0 234.9-105.4 234.9-234.9 0-61.9-24.3-120.1-68.5-163.7zM219.1 460.6c-34.9 0-68.2-9.4-96.6-27.4l-6.8-4.1-70.3 18.4 18.8-68.4-4.4-7.2c-20.4-32.9-31.1-71.1-31.1-110.8 0-109.8 89.2-199 199-199s199 89.2 199 199-89.2 199-199 199zm101.4-138.8c-5.1-2.5-30-14.8-34.7-16.5-4.7-1.7-8.1-2.6-11.4 2.6-3.3 5.3-13.2 16.5-16.2 19.8-3 3.3-6.1 3.7-11.4 1.2-5.3-2.5-22.3-8.2-42.5-26.2-15.6-13.8-26-31.2-29-36.5-3-5.3-.3-8.2 2.3-10.8 2.3-2.5 5.1-6.1 7.6-9.1 2.5-3 2.8-5.7 1.7-8.2-1.2-2.5-11.4-27.3-15.6-37.4-4.2-10.1-8.5-8.8-11.4-8.8-2.6 0-5.6-.4-8.7-.4-3 0-8.1 1.2-12.4 6.1-4.3 4.9-16.5 16.1-16.5 39.2 0 23.1 17 45.4 19.4 48.6 2.5 3.3 33.1 53.4 80.4 74.8 10.9 4.8 19.4 7.7 26.1 9.9 8.1 2.5 15.6 2.2 21.5 1.3 6.6-1 22.3-9.1 25.5-18.1 3.3-8.9 3.3-16.5 2.3-18.1-1-1.7-3.7-2.6-7.1-4.3z"/>
+                </svg>
+            </a>
+            <!-- Ícone do Facebook -->
+            <a href="#" class="text-gray-500 hover:text-gray-900 transition-colors duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-6 w-6 fill-current">
+                    <path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.42 19.1-40.42 38.73V256h68.78l-11 71.69h-57.78V501.69C413.31 482.38 504 379.78 504 256z"/>
+                </svg>
+            </a>
+            <!-- Ícone do Instagram -->
+            <a href="#" class="text-gray-500 hover:text-gray-900 transition-colors duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-6 w-6 fill-current">
+                    <path d="M224.1 140.2c-56.6 0-102.7 46.1-102.7 102.7s46.1 102.7 102.7 102.7S326.8 299.5 326.8 242.9 280.7 140.2 224.1 140.2zm0 180.7c-43.2 0-78.7-35.4-78.7-78.7s35.4-78.7 78.7-78.7 78.7 35.4 78.7 78.7-35.5 78.7-78.7 78.7zm2.4-150.9c.7-3.6 1.1-7.1 1.1-10.7 0-66.3-53.9-120.2-120.2-120.2S0 176.6 0 242.9s53.9 120.2 120.2 120.2c3.6 0 7.1-.5 10.7-1.1h.4c3.4 3.7 6.8 7.4 10.1 11.2l-1.9 1.9c-15.5 15.6-24.1 36.3-24.1 58.1v3.3c0 48.4 39.4 87.8 87.8 87.8h3.3c21.8 0 42.5-8.5 58.1-24.1l1.9-1.9c3.8 3.3 7.5 6.7 11.2 10.1v.4c3.6.7 7.1 1.1 10.7 1.1 66.3 0 120.2-53.9 120.2-120.2S390.4 122.7 324.1 122.7c-3.6 0-7.1.5-10.7 1.1h-.4c-3.4-3.7-6.8-7.4-10.1-11.2l1.9-1.9c15.6-15.5 24.1-36.3 24.1-58.1v-3.3c0-48.4-39.4-87.8-87.8-87.8h-3.3c-21.8 0-42.5 8.5-58.1 24.1l-1.9 1.9c-3.8-3.3-7.5-6.7-11.2-10.1h-.4zm-5.8 238.2c-.3-.2-.5-.4-.7-.6l-1.9-1.9c-14.7-14.7-22.8-34.4-22.8-55.2v-3.3c0-44.1 35.9-80 80-80h3.3c20.8 0 40.5 8.1 55.2 22.8l1.9 1.9c.2.2.4.5.6.7l.6.6c14.1 15.6 21.9 35.7 21.9 57.1v3.3c0 44.1-35.9 80-80 80h-3.3c-21.4 0-41.5-7.8-57.1-21.9l-.6-.6zm100.2-162.7c-5.7-13.6-20.9-22.4-36.4-22.4h-55.1c-15.5 0-30.7 8.8-36.4 22.4-4.6 11-7.1 23-7.1 35.4 0 20.3 8.3 39.4 22.9 53.4 14.6 14 33.7 21.7 54.1 21.7s39.5-7.7 54.1-21.7c14.6-14 22.9-33.1 22.9-53.4 0-12.4-2.5-24.4-7.1-35.4zm-14.7 93.6c-11.3 11-26.3 17.1-42.5 17.1-16.2 0-31.2-6.1-42.5-17.1-11.3-11-17.4-25.9-17.4-41.8s6.1-30.8 17.4-41.8c11.3-11 26.3-17.1 42.5-17.1s31.2 6.1 42.5 17.1c11.3 11 17.4 25.9 17.4 41.8s-6.1 30.8-17.4 41.8z"/>
+                </svg>
+            </a>
+            <!-- Ícone do LinkedIn -->
+            <a href="#" class="text-gray-500 hover:text-gray-900 transition-colors duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-6 w-6 fill-current">
+                    <path d="M416 32H32C14.3 32 0 46.3 0 64v384c0 17.7 14.3 32 32 32h384c17.7 0 32-14.3 32-32V64c0-17.7-14.3-32-32-32zm-64 160h-53.4V432h53.4V192zM128 192h53.4v240H128V192zm-53.4-64c0 19.3-15.7 35-35 35s-35-15.7-35-35 15.7-35 35-35 35 15.7 35 35zm294.7 64c-19.3 0-35-15.7-35-35s15.7-35 35-35 35 15.7 35 35-15.7 35-35 35zm-294.7-64c0 19.3-15.7 35-35 35s-35-15.7-35-35 15.7-35 35-35 35 15.7 35 35z"/>
+                </svg>
+            </a>
+        </div>
+        <p>&copy; 2024 Anderson Oliveira. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
